@@ -128,4 +128,12 @@
   }
 }
 
+- (instancetype)copyWithZone:(NSZone *)zone {
+  KKPriorityQueue *queue = [KKPriorityQueue queueWithComparator:[self.comparator copy] ascending:NSOrderedAscending == self.orderedPrior];
+  
+  queue.objects = [self.objects mutableCopy];
+  
+  return queue;
+}
+
 @end

@@ -37,7 +37,7 @@
   XCTAssertEqual(@1, [self.queue popObject]);
 }
 
-- (void)testAddingObjects {
+- (void)testCountWhenAddingObjects {
   XCTAssertTrue([self.queue isEmpty]);
   XCTAssertEqual((NSUInteger)0, [self.queue count]);
   
@@ -52,7 +52,7 @@
   XCTAssertEqual((NSUInteger)2, [self.queue count]);
 }
 
-- (void)testRemovingObjects {
+- (void)testCountWhenRemovingObjectsWithPopObject {
   [self.queue addObjectsFromArray:@[@1, @2]];
   
   XCTAssertFalse([self.queue isEmpty]);
@@ -143,6 +143,22 @@
   
   XCTAssertNil([self.queue topObject]);
   XCTAssertNil([self.queue popObject]);
+}
+
+- (void)testCopying {
+  NSArray *objects = @[@1, @2, @3, @4, @5, @10, @20, @30];
+  
+  [self.queue addObjectsFromArray:objects];
+  
+  KKPriorityQueue *copy = [self.queue copy];
+  
+  XCTAssertEqual([objects count], [self.queue count]);
+  XCTAssertEqual([objects count], [copy count]);
+  
+  for (NSInteger i = 0; i < [objects count]; i++) {
+    XCTAssertEqual(objects[i], [self.queue popObject]);
+    XCTAssertEqual(objects[i], [copy popObject]);
+  }
 }
 
 @end

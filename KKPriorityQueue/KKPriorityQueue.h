@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface KKPriorityQueue : NSObject
+@interface KKPriorityQueue : NSObject <NSCopying>
 
 + (instancetype)minQueue;
 + (instancetype)maxQueue;
