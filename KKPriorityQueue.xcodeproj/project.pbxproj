@@ -1,0 +1,305 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F9A454BF18B2C746000BD818 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A454BE18B2C746000BD818 /* XCTest.framework */; };
+		F9A454C018B2C746000BD818 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A454A518B2C746000BD818 /* Foundation.framework */; };
+		F9A454CB18B2C746000BD818 /* KKPriorityQueueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A454CA18B2C746000BD818 /* KKPriorityQueueTests.m */; };
+		F9A454D718B2C79D000BD818 /* KKPriorityQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A454D518B2C79D000BD818 /* KKPriorityQueue.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F9A454A518B2C746000BD818 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F9A454BD18B2C746000BD818 /* KKPriorityQueueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KKPriorityQueueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9A454BE18B2C746000BD818 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F9A454C618B2C746000BD818 /* KKPriorityQueueTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KKPriorityQueueTests-Info.plist"; sourceTree = "<group>"; };
+		F9A454CA18B2C746000BD818 /* KKPriorityQueueTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKPriorityQueueTests.m; sourceTree = "<group>"; };
+		F9A454D418B2C79D000BD818 /* KKPriorityQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKPriorityQueue.h; sourceTree = "<group>"; };
+		F9A454D518B2C79D000BD818 /* KKPriorityQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKPriorityQueue.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F9A454BA18B2C746000BD818 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9A454BF18B2C746000BD818 /* XCTest.framework in Frameworks */,
+				F9A454C018B2C746000BD818 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F9A4549918B2C746000BD818 = {
+			isa = PBXGroup;
+			children = (
+				F9A454AB18B2C746000BD818 /* KKPriorityQueue */,
+				F9A454C418B2C746000BD818 /* KKPriorityQueueTests */,
+				F9A454A418B2C746000BD818 /* Frameworks */,
+				F9A454A318B2C746000BD818 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F9A454A318B2C746000BD818 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F9A454BD18B2C746000BD818 /* KKPriorityQueueTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F9A454A418B2C746000BD818 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F9A454A518B2C746000BD818 /* Foundation.framework */,
+				F9A454BE18B2C746000BD818 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F9A454AB18B2C746000BD818 /* KKPriorityQueue */ = {
+			isa = PBXGroup;
+			children = (
+				F9A454D418B2C79D000BD818 /* KKPriorityQueue.h */,
+				F9A454D518B2C79D000BD818 /* KKPriorityQueue.m */,
+			);
+			path = KKPriorityQueue;
+			sourceTree = "<group>";
+		};
+		F9A454C418B2C746000BD818 /* KKPriorityQueueTests */ = {
+			isa = PBXGroup;
+			children = (
+				F9A454CA18B2C746000BD818 /* KKPriorityQueueTests.m */,
+				F9A454C518B2C746000BD818 /* Supporting Files */,
+			);
+			path = KKPriorityQueueTests;
+			sourceTree = "<group>";
+		};
+		F9A454C518B2C746000BD818 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F9A454C618B2C746000BD818 /* KKPriorityQueueTests-Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F9A454BC18B2C746000BD818 /* KKPriorityQueueTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9A454D118B2C746000BD818 /* Build configuration list for PBXNativeTarget "KKPriorityQueueTests" */;
+			buildPhases = (
+				F9A454B918B2C746000BD818 /* Sources */,
+				F9A454BA18B2C746000BD818 /* Frameworks */,
+				F9A454BB18B2C746000BD818 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KKPriorityQueueTests;
+			productName = KKPriorityQueueTests;
+			productReference = F9A454BD18B2C746000BD818 /* KKPriorityQueueTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F9A4549A18B2C746000BD818 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = KK;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Karol Kozub";
+				TargetAttributes = {
+					F9A454BC18B2C746000BD818 = {
+						TestTargetID = F9A454A118B2C746000BD818;
+					};
+				};
+			};
+			buildConfigurationList = F9A4549D18B2C746000BD818 /* Build configuration list for PBXProject "KKPriorityQueue" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F9A4549918B2C746000BD818;
+			productRefGroup = F9A454A318B2C746000BD818 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F9A454BC18B2C746000BD818 /* KKPriorityQueueTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F9A454BB18B2C746000BD818 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F9A454B918B2C746000BD818 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9A454CB18B2C746000BD818 /* KKPriorityQueueTests.m in Sources */,
+				F9A454D718B2C79D000BD818 /* KKPriorityQueue.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F9A454CC18B2C746000BD818 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F9A454CD18B2C746000BD818 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F9A454D218B2C746000BD818 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KKPriorityQueue.app/KKPriorityQueue";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "KKPriorityQueueTests/KKPriorityQueueTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		F9A454D318B2C746000BD818 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KKPriorityQueue.app/KKPriorityQueue";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = "KKPriorityQueueTests/KKPriorityQueueTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F9A4549D18B2C746000BD818 /* Build configuration list for PBXProject "KKPriorityQueue" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9A454CC18B2C746000BD818 /* Debug */,
+				F9A454CD18B2C746000BD818 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9A454D118B2C746000BD818 /* Build configuration list for PBXNativeTarget "KKPriorityQueueTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9A454D218B2C746000BD818 /* Debug */,
+				F9A454D318B2C746000BD818 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F9A4549A18B2C746000BD818 /* Project object */;
+}
