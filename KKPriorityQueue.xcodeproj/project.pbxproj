@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F9A454BF18B2C746000BD818 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A454BE18B2C746000BD818 /* XCTest.framework */; };
-		F9A454C018B2C746000BD818 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A454A518B2C746000BD818 /* Foundation.framework */; };
+		F93FA32918B6EC25009EE7E2 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A454BE18B2C746000BD818 /* XCTest.framework */; };
+		F93FA32A18B6EC2B009EE7E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A454A518B2C746000BD818 /* Foundation.framework */; };
 		F9A454CB18B2C746000BD818 /* KKPriorityQueueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A454CA18B2C746000BD818 /* KKPriorityQueueTests.m */; };
 		F9A454D718B2C79D000BD818 /* KKPriorityQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A454D518B2C79D000BD818 /* KKPriorityQueue.m */; };
 /* End PBXBuildFile section */
@@ -28,8 +28,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9A454BF18B2C746000BD818 /* XCTest.framework in Frameworks */,
-				F9A454C018B2C746000BD818 /* Foundation.framework in Frameworks */,
+				F93FA32A18B6EC2B009EE7E2 /* Foundation.framework in Frameworks */,
+				F93FA32918B6EC25009EE7E2 /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,7 +199,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -231,7 +231,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				SDKROOT = iphoneos;
+				SDKROOT = macosx;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -240,9 +240,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KKPriorityQueue.app/KKPriorityQueue";
+				BUNDLE_LOADER = "";
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
@@ -254,6 +253,7 @@
 				);
 				INFOPLIST_FILE = "KKPriorityQueueTests/KKPriorityQueueTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -263,9 +263,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KKPriorityQueue.app/KKPriorityQueue";
+				BUNDLE_LOADER = "";
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
@@ -273,6 +272,7 @@
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = "KKPriorityQueueTests/KKPriorityQueueTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
