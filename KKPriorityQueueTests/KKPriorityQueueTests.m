@@ -173,6 +173,16 @@
   XCTAssertEqualObjects((@[@1, @3, @5, @7, @8]), self.queueArrayValue);
 }
 
+- (void)testRemovingObjectsWithRemoveObjectsFromArray {
+  [self.queue addObjectsFromArray:@[@7, @2, @6, @4, @5, @1, @3, @8]];
+
+  [self.queue removeObjectsFromArray:@[@4, @5, @1, @8]];
+  
+  XCTAssertEqualObjects((@[@2, @3, @6, @7]), self.queueArrayValue);
+}
+
+#pragma mark -
+
 - (NSArray *)queueArrayValue {
   NSMutableArray *array = [NSMutableArray array];
   KKPriorityQueue *queueCopy = [self.queue copy];

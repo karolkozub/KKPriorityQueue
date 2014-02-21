@@ -137,6 +137,12 @@
   }
 }
 
+- (void)removeObjectsFromArray:(NSArray *)objects {
+  for (id object in objects) {
+    [self removeObject:object];
+  }
+}
+
 - (instancetype)copyWithZone:(NSZone *)zone {
   KKPriorityQueue *queue = [KKPriorityQueue queueWithComparator:[self.comparator copy] ascending:NSOrderedAscending == self.orderedPrior];
   

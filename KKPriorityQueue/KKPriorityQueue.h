@@ -21,5 +21,6 @@
 - (void)addObject:(id)object;
 - (void)addObjectsFromArray:(NSArray *)objects;
 - (void)removeObject:(id)object;
+- (void)removeObjectsFromArray:(NSArray *)objects;
 
 @end
