@@ -61,41 +61,9 @@
 }
 
 - (id)popObject {
-  if ([self isEmpty]) {
-    return nil;
-  }
-  
   id result = [self.objects firstObject];
-  NSInteger index = 0;
 
-  [self.objects exchangeObjectAtIndex:0 withObjectAtIndex:[self.objects count] - 1];
-  [self.objects removeLastObject];
-  
-  while (index < [self.objects count]) {
-    NSInteger leftChildIndex = (index + 1) * 2 - 1;
-    NSInteger rightChildIndex = (index + 1) * 2;
-    NSInteger priorChildIndex;
-    
-    BOOL isLeftChildPrior = leftChildIndex < [self.objects count] && [self isObjectAtIndex:leftChildIndex priorToObjectAtIndex:index];
-    BOOL isRightChildPrior = rightChildIndex < [self.objects count] && [self isObjectAtIndex:rightChildIndex priorToObjectAtIndex:index];
-    
-    if (isLeftChildPrior && isRightChildPrior) {
-      priorChildIndex = [self isObjectAtIndex:leftChildIndex priorToObjectAtIndex:rightChildIndex] ? leftChildIndex : rightChildIndex;
-      
-    } else if (isLeftChildPrior) {
-      priorChildIndex = leftChildIndex;
-      
-    } else if (isRightChildPrior) {
-      priorChildIndex = rightChildIndex;
-      
-    } else {
-      break;
-    }
-
-    [self.objects exchangeObjectAtIndex:index withObjectAtIndex:priorChildIndex];
-    
-    index = priorChildIndex;
-  }
+  [self removeObjectAtIndex:0];
   
   return result;
 }
@@ -125,6 +93,47 @@
 - (void)addObjectsFromArray:(NSArray *)objects {
   for (id object in objects) {
     [self addObject:object];
+  }
+}
+
+- (void)removeObject:(id)object {
+  NSInteger index = [self.objects indexOfObject:object];
+  
+  [self removeObjectAtIndex:index];
+}
+
+- (void)removeObjectAtIndex:(NSInteger)index {
+  if (index >= [self.objects count]) {
+    return;
+  }
+  
+  [self.objects exchangeObjectAtIndex:index withObjectAtIndex:[self.objects count] - 1];
+  [self.objects removeLastObject];
+  
+  while (index < [self.objects count]) {
+    NSInteger leftChildIndex = (index + 1) * 2 - 1;
+    NSInteger rightChildIndex = (index + 1) * 2;
+    NSInteger priorChildIndex;
+    
+    BOOL isLeftChildPrior = leftChildIndex < [self.objects count] && [self isObjectAtIndex:leftChildIndex priorToObjectAtIndex:index];
+    BOOL isRightChildPrior = rightChildIndex < [self.objects count] && [self isObjectAtIndex:rightChildIndex priorToObjectAtIndex:index];
+    
+    if (isLeftChildPrior && isRightChildPrior) {
+      priorChildIndex = [self isObjectAtIndex:leftChildIndex priorToObjectAtIndex:rightChildIndex] ? leftChildIndex : rightChildIndex;
+      
+    } else if (isLeftChildPrior) {
+      priorChildIndex = leftChildIndex;
+      
+    } else if (isRightChildPrior) {
+      priorChildIndex = rightChildIndex;
+      
+    } else {
+      break;
+    }
+    
+    [self.objects exchangeObjectAtIndex:index withObjectAtIndex:priorChildIndex];
+    
+    index = priorChildIndex;
   }
 }
 

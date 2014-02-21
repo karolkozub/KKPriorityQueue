@@ -20,5 +20,6 @@
 - (id)popObject;
 - (void)addObject:(id)object;
 - (void)addObjectsFromArray:(NSArray *)objects;
+- (void)removeObject:(id)object;
 
 @end

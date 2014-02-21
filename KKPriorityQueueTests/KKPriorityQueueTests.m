@@ -12,10 +12,12 @@
 @interface KKPriorityQueueTests : XCTestCase
 
 @property (nonatomic, strong) KKPriorityQueue *queue;
+@property (nonatomic, strong, readonly) NSArray *queueArrayValue;
 
 @end
 
 @implementation KKPriorityQueueTests
+@dynamic queueArrayValue;
 
 - (void)setUp {
   self.queue = [KKPriorityQueue minQueue];
@@ -160,5 +162,27 @@
     XCTAssertEqual(objects[i], [copy popObject]);
   }
 }
+
+- (void)testRemovingObjectsWithRemoveObject {
+  [self.queue addObjectsFromArray:@[@7, @2, @6, @4, @5, @1, @3, @8]];
+
+  [self.queue removeObject:@4];
+  [self.queue removeObject:@2];
+  [self.queue removeObject:@6];
+  
+  XCTAssertEqualObjects((@[@1, @3, @5, @7, @8]), self.queueArrayValue);
+}
+
+- (NSArray *)queueArrayValue {
+  NSMutableArray *array = [NSMutableArray array];
+  KKPriorityQueue *queueCopy = [self.queue copy];
+  
+  while (![queueCopy isEmpty]) {
+    [array addObject:[queueCopy popObject]];
+  }
+  
+  return [array copy];
+}
+
 
 @end
