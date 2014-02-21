@@ -9,11 +9,28 @@
 /* Begin PBXBuildFile section */
 		F93FA32918B6EC25009EE7E2 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A454BE18B2C746000BD818 /* XCTest.framework */; };
 		F93FA32A18B6EC2B009EE7E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A454A518B2C746000BD818 /* Foundation.framework */; };
+		F93FA34018B6EEB6009EE7E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A454A518B2C746000BD818 /* Foundation.framework */; };
+		F93FA34318B6EEB6009EE7E2 /* KKPriorityQueueBenchmarks.m in Sources */ = {isa = PBXBuildFile; fileRef = F93FA34218B6EEB6009EE7E2 /* KKPriorityQueueBenchmarks.m */; };
+		F93FA34B18B6F016009EE7E2 /* KKPriorityQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A454D518B2C79D000BD818 /* KKPriorityQueue.m */; };
 		F9A454CB18B2C746000BD818 /* KKPriorityQueueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A454CA18B2C746000BD818 /* KKPriorityQueueTests.m */; };
 		F9A454D718B2C79D000BD818 /* KKPriorityQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A454D518B2C79D000BD818 /* KKPriorityQueue.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F93FA33D18B6EEB6009EE7E2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		F93FA33F18B6EEB6009EE7E2 /* KKPriorityQueueBenchmark */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KKPriorityQueueBenchmark; sourceTree = BUILT_PRODUCTS_DIR; };
+		F93FA34218B6EEB6009EE7E2 /* KKPriorityQueueBenchmarks.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKPriorityQueueBenchmarks.m; sourceTree = "<group>"; };
 		F9A454A518B2C746000BD818 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F9A454BD18B2C746000BD818 /* KKPriorityQueueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KKPriorityQueueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9A454BE18B2C746000BD818 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -24,6 +41,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F93FA33C18B6EEB6009EE7E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F93FA34018B6EEB6009EE7E2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F9A454BA18B2C746000BD818 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -36,11 +61,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F93FA34118B6EEB6009EE7E2 /* KKPriorityQueueBenchmarks */ = {
+			isa = PBXGroup;
+			children = (
+				F93FA34218B6EEB6009EE7E2 /* KKPriorityQueueBenchmarks.m */,
+			);
+			path = KKPriorityQueueBenchmarks;
+			sourceTree = "<group>";
+		};
 		F9A4549918B2C746000BD818 = {
 			isa = PBXGroup;
 			children = (
 				F9A454AB18B2C746000BD818 /* KKPriorityQueue */,
 				F9A454C418B2C746000BD818 /* KKPriorityQueueTests */,
+				F93FA34118B6EEB6009EE7E2 /* KKPriorityQueueBenchmarks */,
 				F9A454A418B2C746000BD818 /* Frameworks */,
 				F9A454A318B2C746000BD818 /* Products */,
 			);
@@ -50,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				F9A454BD18B2C746000BD818 /* KKPriorityQueueTests.xctest */,
+				F93FA33F18B6EEB6009EE7E2 /* KKPriorityQueueBenchmark */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -92,6 +127,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F93FA33E18B6EEB6009EE7E2 /* KKPriorityQueueBenchmarks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F93FA34A18B6EEB6009EE7E2 /* Build configuration list for PBXNativeTarget "KKPriorityQueueBenchmarks" */;
+			buildPhases = (
+				F93FA33B18B6EEB6009EE7E2 /* Sources */,
+				F93FA33C18B6EEB6009EE7E2 /* Frameworks */,
+				F93FA33D18B6EEB6009EE7E2 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KKPriorityQueueBenchmarks;
+			productName = KKPriorityQueueBenchmark;
+			productReference = F93FA33F18B6EEB6009EE7E2 /* KKPriorityQueueBenchmark */;
+			productType = "com.apple.product-type.tool";
+		};
 		F9A454BC18B2C746000BD818 /* KKPriorityQueueTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F9A454D118B2C746000BD818 /* Build configuration list for PBXNativeTarget "KKPriorityQueueTests" */;
@@ -137,6 +189,7 @@
 			projectRoot = "";
 			targets = (
 				F9A454BC18B2C746000BD818 /* KKPriorityQueueTests */,
+				F93FA33E18B6EEB6009EE7E2 /* KKPriorityQueueBenchmarks */,
 			);
 		};
 /* End PBXProject section */
@@ -152,6 +205,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F93FA33B18B6EEB6009EE7E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F93FA34318B6EEB6009EE7E2 /* KKPriorityQueueBenchmarks.m in Sources */,
+				F93FA34B18B6F016009EE7E2 /* KKPriorityQueue.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F9A454B918B2C746000BD818 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -164,6 +226,33 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		F93FA34818B6EEB6009EE7E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F93FA34918B6EEB6009EE7E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		F9A454CC18B2C746000BD818 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -281,6 +370,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F93FA34A18B6EEB6009EE7E2 /* Build configuration list for PBXNativeTarget "KKPriorityQueueBenchmarks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F93FA34818B6EEB6009EE7E2 /* Debug */,
+				F93FA34918B6EEB6009EE7E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		F9A4549D18B2C746000BD818 /* Build configuration list for PBXProject "KKPriorityQueue" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
